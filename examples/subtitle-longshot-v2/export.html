@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>字幕长图 · 导出与分享</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="phone">
+    <header class="topbar">
+      <a class="icon" href="preview.html" aria-label="返回">‹</a>
+      <h1>导出与分享</h1>
+      <button class="icon" data-open="help" aria-label="说明">?</button>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <div class="section-head">
+          <h3>导出预览</h3>
+          <span class="chip">PNG 高清</span>
+        </div>
+        <div class="poster">
+          <h4>字幕长图</h4>
+          <p>共 52 条字幕 · 已去重</p>
+          <div class="poster-lines">
+            <span>你看，这段台词非常适合做成图。</span>
+            <span>自动截取字幕区域，省去逐张截图。</span>
+            <span>过滤重复字幕，长图更精炼更好读。</span>
+            <span>预览可删误判，再一键导出分享。</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>导出设置</h3>
+        <div class="meta-grid single">
+          <div><span>格式</span><strong>PNG</strong></div>
+          <div><span>背景</span><strong>深色</strong></div>
+          <div><span>分辨率</span><strong>宽度自适应高清</strong></div>
+          <div><span>社媒兼容</span><strong>超长图可后续支持分片</strong></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="safe-footer">
+      <div class="cta-row">
+        <button class="btn ghost" data-share>系统分享</button>
+        <button class="btn primary" data-save>保存到相册</button>
+      </div>
+      <a class="btn muted-btn block" href="index.html">再做一张</a>
+    </footer>
+
+    <div class="toast" data-toast></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>字幕长图 · 配置与处理</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="phone">
+    <header class="topbar">
+      <a class="icon" href="index.html" aria-label="返回">‹</a>
+      <h1>配置与处理</h1>
+      <button class="icon" data-open="help" aria-label="说明">?</button>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <div class="section-head">
+          <h3>当前视频</h3>
+          <span class="chip">03:28</span>
+        </div>
+        <div class="meta-grid">
+          <div><span>文件</span><strong>示例字幕视频.mp4</strong></div>
+          <div><span>分辨率</span><strong>1920 × 1080</strong></div>
+          <div><span>帧率</span><strong>24 fps</strong></div>
+          <div><span>预计耗时</span><strong>40-70 秒</strong></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>截取参数</h3>
+        <label class="row-split">
+          <div>
+            <strong>去除重复字幕</strong>
+            <p>自动过滤字幕内容相同的连续画面。</p>
+          </div>
+          <input type="checkbox" checked />
+        </label>
+
+        <div class="field">
+          <strong>字幕区域</strong>
+          <p>默认自动识别；不准时可手动微调。</p>
+          <div class="tabs" data-tabs>
+            <button class="active">自动</button>
+            <button>偏底部</button>
+            <button data-open="crop">手动</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <strong>输出风格</strong>
+          <div class="tabs" data-tabs>
+            <button class="active">深色背景</button>
+            <button>浅色背景</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h3>处理进度</h3>
+          <span class="state doing" data-stage-chip>未开始</span>
+        </div>
+        <div class="progress-wrap">
+          <div class="bar"><span data-progress></span></div>
+          <div class="progress-text">
+            <span data-progress-text>点击开始后将执行识别、提取、去重与拼接。</span>
+            <strong data-progress-num>0%</strong>
+          </div>
+        </div>
+        <ol class="steps">
+          <li data-step="1"><span>识别字幕区域</span><em>待开始</em></li>
+          <li data-step="2"><span>提取字幕画面</span><em>待开始</em></li>
+          <li data-step="3"><span>去重与整理</span><em>待开始</em></li>
+          <li data-step="4"><span>拼接长图</span><em>待开始</em></li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="safe-footer">
+      <div class="cta-row">
+        <button class="btn ghost" data-cancel>取消</button>
+        <a class="btn muted-btn disabled" data-result href="preview.html" aria-disabled="true">查看结果</a>
+      </div>
+      <button class="btn primary block" data-start>开始处理</button>
+    </footer>
+
+    <div class="sheet" data-sheet="crop" aria-hidden="true">
+      <div class="sheet-mask" data-close="crop"></div>
+      <div class="sheet-body">
+        <div class="sheet-head">
+          <h3>手动调整字幕区域</h3>
+          <button class="icon" data-close="crop">×</button>
+        </div>
+        <div class="mock-video">
+          <div class="crop-box" data-crop-box></div>
+        </div>
+        <label>区域高度<input type="range" min="15" max="45" value="26" data-crop-height /></label>
+        <label>区域位置<input type="range" min="50" max="86" value="73" data-crop-top /></label>
+        <button class="btn primary block" data-apply-crop>应用区域</button>
+      </div>
+    </div>
+
+    <div class="toast" data-toast></div>
+  </div>
+</body>
+</html>

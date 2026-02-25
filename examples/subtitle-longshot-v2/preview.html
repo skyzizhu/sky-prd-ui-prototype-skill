@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>字幕长图 · 结果预览</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="phone">
+    <header class="topbar">
+      <a class="icon" href="process.html" aria-label="返回">‹</a>
+      <h1>结果预览</h1>
+      <button class="icon" data-open="crop" aria-label="调整区域">⤢</button>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <div class="section-head">
+          <h3>拼接预览</h3>
+          <span class="chip">示例数据</span>
+        </div>
+        <div class="longshot">
+          <div class="line">你看，这段台词非常适合做成图。</div>
+          <div class="line">自动截取字幕区域，省去逐张截图。</div>
+          <div class="line">过滤重复字幕，长图更精炼更好读。</div>
+          <div class="line">预览可删误判，再一键导出分享。</div>
+          <div class="line">识别不准时，支持手动微调区域。</div>
+          <div class="line">导出高清图，适配社媒发布场景。</div>
+        </div>
+        <div class="kpis">
+          <article><strong>248</strong><span>候选画面</span></article>
+          <article><strong data-count>52</strong><span>去重后条目</span></article>
+          <article><strong>79%</strong><span>去重比例</span></article>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h3>字幕条目</h3>
+          <button class="link-btn" data-reset>还原</button>
+        </div>
+        <div class="list" data-list>
+          <div class="item" data-item><p>00:04 你看，这段台词非常适合做成图。</p><button data-del>删除</button></div>
+          <div class="item" data-item><p>00:11 自动截取字幕区域，省去逐张截图。</p><button data-del>删除</button></div>
+          <div class="item" data-item><p>00:19 过滤重复字幕，长图更精炼更好读。</p><button data-del>删除</button></div>
+          <div class="item" data-item><p>00:28 预览可删误判，再一键导出分享。</p><button data-del>删除</button></div>
+          <div class="item" data-item><p>00:40 识别不准时，支持手动微调区域。</p><button data-del>删除</button></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="safe-footer">
+      <div class="cta-row">
+        <a class="btn ghost" href="process.html">重新处理</a>
+        <a class="btn primary" href="export.html">导出长图</a>
+      </div>
+    </footer>
+
+    <div class="sheet" data-sheet="crop" aria-hidden="true">
+      <div class="sheet-mask" data-close="crop"></div>
+      <div class="sheet-body">
+        <div class="sheet-head">
+          <h3>调整字幕区域</h3>
+          <button class="icon" data-close="crop">×</button>
+        </div>
+        <p class="muted">应用后将重新渲染预览（原型示意）。</p>
+        <button class="btn primary block" data-apply-crop>应用并刷新</button>
+      </div>
+    </div>
+
+    <div class="toast" data-toast></div>
+  </div>
+</body>
+</html>
